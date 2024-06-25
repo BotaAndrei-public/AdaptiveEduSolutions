@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+*{
+   box-sizing:border-box;
+   /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+ }
+
+ body::-webkit-scrollbar{
+   display: none;
+ }
+
+ .titlu {
+   font-family: 'Press Start 2P', cursive;
+   font-size: 3rem;
+   color: rgb(255, 255, 255);
+   background: rgba(255, 255, 255, 0.507);
+   padding: 1%;
+   margin-left: 30%;
+   margin-right: 30%;
+   border-radius: 5px;
+   transition: 1s;
+   animation: animatie 3s alternate-reverse infinite linear;
+   
+}
+
+@keyframes animatie  {
+   from {box-shadow: 0px 0px 20px 1px rgb(60, 96, 105);
+       text-shadow: 0.5px 0.5px 0.2px rgba(255, 255, 255, 0), 2px 2px 5px rgba(255, 255, 255, 0), 2px 2px rgb(15, 28, 31), 0px 0px 70px rgb(60, 96, 105);}
+   to {box-shadow: 0px 0px 20px 1px rgb(149, 194, 206);
+       text-shadow: 0.5px 0.5px 0.2px rgba(255, 255, 255, 0), 2px 2px 5px rgba(255, 255, 255, 0), 2px 2px rgb(11, 16, 17), 0px 0px 70px rgb(60, 96, 105);}
+ }
+
+  .container1 {
+   background: hsla(191, 33.9%, 78.6%, 0.425);
+   margin-right:10rem;
+   margin-left: 10rem;
+   border-radius: 20px;
+   justify-content: center;
+   padding: 1rem;
+   border: solid 0.5rem rgb(60, 96, 105);
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(7px);
+   -webkit-backdrop-filter: blur(7px);
+   margin-bottom: 1rem;
+}
+
+.container-info{
+   background: hsla(224, 64%, 14%, 0.439);
+   margin-right:0rem;
+   margin-left: 0rem;
+   border-radius: 20px;
+   justify-content: center;
+   padding: 1rem;
+   border: solid 0.5rem rgba(5, 3, 27, 0.521);
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(7px);
+   -webkit-backdrop-filter: blur(7px);
+   margin-bottom: 1rem;
+}
+
+.container2 {
+   background: hsl(191, 34%, 79%);
+   margin-right:10rem;
+   margin-left: 10rem;
+   border-radius: 20px;
+   justify-content: center;
+   padding: 1rem;
+   border: solid 0.5rem rgb(60, 96, 105);
+   margin-bottom: 1rem;
+   
+}
+
+.container3{
+   background: hsla(0, 0%, 0%, 0.822);
+   margin-right:0;
+   margin-left: 0;
+   border-radius: 20px;
+   padding: 1rem;
+   border: solid 0.5rem rgba(57, 62, 63, 0.897);;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 0.5rem;
+   
+
+}
+.container4{
+  background: hsla(0, 0%, 0%, 0.822);
+  margin-right:0;
+  margin-left: 0;
+  border-radius: 20px;
+  padding: 1rem;
+  border: solid 0.5rem rgba(57, 62, 63, 0.897);;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  
+
+}
+.imgMateriiOptica
+{
+   border: 0.5rem solid rgb(50, 81, 122);
+   border-radius: 1.5rem;
+}
+.imgMateriiTermodinamica
+{
+   border: 0.5rem solid rgb(122, 50, 50);
+   border-radius: 1.5rem;
+}
+.imgMateriiMecanica
+{
+   border: 0.5rem solid rgb(219, 219, 219);
+   border-radius: 1.5rem;
+}
+.imgMateriiElec
+{
+   border: 0.5rem solid rgb(62, 122, 50);
+   border-radius: 1.5rem;
+}
+
+
+.Text-Curs
+{
+ 
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1.5rem;
+   color: rgba(253, 253, 253, 0.822);
+   text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+   background: rgba(161, 56, 56, 0.842);
+   padding: 1%;
+   margin-left:0.2rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   
+}
+.Text-Curs:hover
+{
+
+   background: rgba(0, 0, 0, 0.842);
+ 
+}
+
+.Text-Test
+{
+ 
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1.5rem;
+   color: rgba(253, 253, 253, 0.822);
+   text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+   background: rgba(112, 81, 153, 0.842);
+   padding: 1%;
+   margin-left:0.2rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   
+}
+.Text-Test:hover
+{
+  background: rgba(0, 0, 0, 0.842);
+}
+
+.Text-Seminar
+{
+ 
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1.5rem;
+   color: rgba(253, 253, 253, 0.822);
+   text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+   background: rgba(56, 93, 161, 0.842);
+   padding: 1%;
+   margin-left:0.2rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   
+}
+
+.Text-Seminar:hover
+{
+ background: #000;  
+}
+
+.Text-Laborator
+{
+ 
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1.5rem;
+   color: rgba(253, 253, 253, 0.822);
+   text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+   background: rgba(65, 161, 56, 0.842);
+   padding: 1%;
+   margin-left:0.2rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   
+}
+
+.Text-Laborator:hover
+{
+  background: #000;
+}
+
+
+.text-coin{
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1.5rem;
+   color: rgba(253, 253, 253, 0.822);
+   text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0.815);
+   background: rgba(47, 134, 150, 0.842);
+   padding: 1%;
+   margin-left:1rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   margin-left:0.2rem;
+   
+   
+}
+
+.text-price{
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1.5rem;
+   color: rgba(253, 253, 253, 0.822);
+   text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+   background: rgba(65, 161, 56, 0.842);
+   padding: 1%;
+   margin-left:1rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   width: 50%;
+
+  
+   
+}
+
+
+ .homeImage{
+  background: rgba(184, 212, 219, 0);
+   background-image: url(../Poze/Icon.webp);
+   margin-top: 1rem;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 20%;
+   padding: 10%;
+
+
+   
+ }
+
+ .container3 img{
+   width: 5rem;
+ }
+
+ .convert-text1{
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1.5rem;
+   color: rgba(253, 253, 253, 0.822);
+   text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+   background: rgb(22, 22, 22);
+   padding: 1%;
+   margin-left:1rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   width: 50%;
+   margin-bottom: 0.5rem;
+ }
+
+ .convert-text2{
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1.5rem;
+   color: rgba(253, 253, 253, 0.822);
+   text-shadow: 0.5px 0.5px 0.2px rgba(255, 255, 255, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+   background: rgba(16, 137, 194, 0.842);
+   padding: 1%;
+   margin-left:1rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   width: 50%;
+   margin-bottom: 0.5rem;
+ }
+
+ .info-text {
+   font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 1.5rem;
+   color: rgba(253, 253, 253, 0.822);
+
+   background: rgb(22, 22, 22);
+   padding: 1%;
+   margin-left:1rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   width: 50%;
+   margin-bottom: 0.5rem;
+ }
+
+
+ @media(max-width: 1500px){
+    
+   .titlu {
+       font-size: 1.5rem ;
+       margin-left: 0%;
+       margin-right: 0%;  
+   }
+   
+   
+   .container1{
+       margin-right:1rem;
+       margin-left: 1rem;
+      
+   }
+   
+   .container3{
+       margin-right:1rem;
+       margin-left: 1rem;
+    
+   }
+   
+   
+   .container2{
+       margin-right:1rem;
+       margin-left: 1rem;
+      
+   }
+   .container3 img {
+     width: 3rem;
+   }
+   
+   .text-coin{
+       font-size: 1.5rem;
+   }
+   
+   .text-price{
+       font-size: 1rem;
+       width: 100%;
+       margin-left: 0;
+   }
+   
+   .convert-text1{
+       font-family: 'Press Start 2P', cursive;
+       font-size: 1.5rem;
+       color: rgba(253, 253, 253, 0.822);
+       text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+       background: rgb(22, 22, 22);
+       padding: 1%;
+       margin-left:0rem;
+       box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+       border: 1px solid rgba(0, 0, 0, 0.493);
+       border-radius: 5px;
+       transition: 1s;
+       width: 100%;
+   
+   }
+   .convert-text2{
+       font-family: 'Press Start 2P', cursive;
+       font-size: 1.5rem;
+       color: rgba(253, 253, 253, 0.822);
+       text-shadow: 0.5px 0.5px 0.2px rgba(255, 255, 255, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(134, 134, 134), 0px 0px 70px rgba(0, 0, 0, 0);
+       background: rgba(16, 137, 194, 0.842);
+       padding: 1%;
+       margin-left:0rem;
+   
+       border: 1px solid rgba(0, 0, 0, 0.493);
+       border-radius: 5px;
+       transition: 1s;
+       width: 100%;
+   
+   }
+
+   .info-text {
+      font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 1rem;
+      color: rgba(253, 253, 253, 0.822);
+   
+      background: rgb(22, 22, 22);
+      padding: 1%;
+      margin-left:1rem;
+      box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+      border: 1px solid rgba(0, 0, 0, 0.493);
+      border-radius: 5px;
+      transition: 1s;
+      width: 90%;
+      margin-bottom: 0.5rem;
+    }
+
+    .Text-Curs
+{
+ 
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1rem;
+   color: rgba(253, 253, 253, 0.822);
+   text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+   background: rgba(161, 56, 56, 0.842);
+   padding: 1%;
+   margin-left:0.2rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   
+}
+
+.Text-Seminar
+{
+ 
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1rem;
+   color: rgba(253, 253, 253, 0.822);
+   text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+   background: rgba(56, 93, 161, 0.842);
+   padding: 1%;
+   margin-left:0.2rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   
+}
+
+.Text-Laborator
+{
+ 
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1rem;
+   color: rgba(253, 253, 253, 0.822);
+   text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+   background: rgba(65, 161, 56, 0.842);
+   padding: 1%;
+   margin-left:0.2rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   
+}
+.text-coin{
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1rem;
+   color: rgba(253, 253, 253, 0.822);
+   text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0.815);
+   background: rgba(47, 134, 150, 0.842);
+   padding: 1%;
+   margin-left:1rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   margin-left:0.2rem;
+   
+   
+}
+
+.Text-Test
+{
+ 
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1rem;
+   color: rgba(253, 253, 253, 0.822);
+   text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+   background: rgba(161, 56, 56, 0.842);
+   padding: 1%;
+   margin-left:0.2rem;
+   box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+   border: 1px solid rgba(0, 0, 0, 0.493);
+   border-radius: 5px;
+   transition: 1s;
+   
+}
+   
+   }
+
+   @media(max-width: 900px){
+    
+    .titlu {
+        font-size: 1.5rem ;
+        margin-left: 0%;
+        margin-right: 0%;  
+    }
+    
+    
+    .container1{
+        margin-right:1rem;
+        margin-left: 1rem;
+       
+    }
+    
+    .container3{
+        margin-right:1rem;
+        margin-left: 1rem;
+     
+    }
+    
+    
+    .container2{
+        margin-right:1rem;
+        margin-left: 1rem;
+       
+    }
+    .container3 img {
+      width: 3rem;
+    }
+    
+    .text-coin{
+        font-size: 1.5rem;
+    }
+    
+    .text-price{
+        font-size: 1rem;
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .convert-text1{
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1.5rem;
+        color: rgba(253, 253, 253, 0.822);
+        text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+        background: rgb(22, 22, 22);
+        padding: 1%;
+        margin-left:0rem;
+        box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+        border: 1px solid rgba(0, 0, 0, 0.493);
+        border-radius: 5px;
+        transition: 1s;
+        width: 100%;
+    
+    }
+    .convert-text2{
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1.5rem;
+        color: rgba(253, 253, 253, 0.822);
+        text-shadow: 0.5px 0.5px 0.2px rgba(255, 255, 255, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(134, 134, 134), 0px 0px 70px rgba(0, 0, 0, 0);
+        background: rgba(16, 137, 194, 0.842);
+        padding: 1%;
+        margin-left:0rem;
+    
+        border: 1px solid rgba(0, 0, 0, 0.493);
+        border-radius: 5px;
+        transition: 1s;
+        width: 100%;
+    
+    }
+ 
+    .info-text {
+       font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       font-size: 1rem;
+       color: rgba(253, 253, 253, 0.822);
+    
+       background: rgb(22, 22, 22);
+       padding: 1%;
+       margin-left:1rem;
+       box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+       border: 1px solid rgba(0, 0, 0, 0.493);
+       border-radius: 5px;
+       transition: 1s;
+       width: 90%;
+       margin-bottom: 0.5rem;
+     }
+ 
+     .Text-Curs
+ {
+  
+    font-family: 'Press Start 2P', cursive;
+    font-size: .5rem;
+    color: rgba(253, 253, 253, 0.822);
+    text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+    background: rgba(161, 56, 56, 0.842);
+    padding: 1%;
+    margin-left:0.2rem;
+    box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+    border: 1px solid rgba(0, 0, 0, 0.493);
+    border-radius: 5px;
+    transition: 1s;
+    
+ }
+ 
+ .Text-Seminar
+ {
+  
+    font-family: 'Press Start 2P', cursive;
+    font-size: .5rem;
+    color: rgba(253, 253, 253, 0.822);
+    text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+    background: rgba(56, 93, 161, 0.842);
+    padding: 1%;
+    margin-left:0.2rem;
+    box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+    border: 1px solid rgba(0, 0, 0, 0.493);
+    border-radius: 5px;
+    transition: 1s;
+    
+ }
+ 
+ .Text-Laborator
+ {
+  
+    font-family: 'Press Start 2P', cursive;
+    font-size: .5rem;
+    color: rgba(253, 253, 253, 0.822);
+    text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+    background: rgba(65, 161, 56, 0.842);
+    padding: 1%;
+    margin-left:0.2rem;
+    box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+    border: 1px solid rgba(0, 0, 0, 0.493);
+    border-radius: 5px;
+    transition: 1s;
+    
+ }
+ .text-coin{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.5rem;
+    color: rgba(253, 253, 253, 0.822);
+    text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0.815);
+    background: rgba(47, 134, 150, 0.842);
+    padding: 1%;
+    margin-left:1rem;
+    box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+    border: 1px solid rgba(0, 0, 0, 0.493);
+    border-radius: 5px;
+    transition: 1s;
+    margin-left:0.2rem;
+    
+    
+ }
+ .Text-Test
+ {
+  
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.5rem;
+    color: rgba(253, 253, 253, 0.822);
+    text-shadow: 0.5px 0.5px 0.2px rgba(5, 12, 32, 0), 2px 2px 5px rgba(0, 0, 0, 0), 2px 2px rgb(4, 45, 99), 0px 0px 70px rgba(0, 0, 0, 0);
+    background: rgba(161, 56, 56, 0.842);
+    padding: 1%;
+    margin-left:0.2rem;
+    box-shadow: 0px 0px 20px 1px rgba(255, 8, 8, 0);
+    border: 1px solid rgba(0, 0, 0, 0.493);
+    border-radius: 5px;
+    transition: 1s;
+    
+ }
+    
+    }

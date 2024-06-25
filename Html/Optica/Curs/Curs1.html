@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legea lui Snell în Optică</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        code {
+            background: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Legea lui Snell în Optică</h1>
+        <p>Legea lui Snell, cunoscută și sub numele de legea refracției, descrie modul în care se comportă lumina atunci când trece prin interfața dintre două medii cu indicii de refracție diferiți. Aceasta se aplică atunci când lumina trece de la un mediu cu un indice de refracție <code>n<sub>1</sub></code> la un alt mediu cu un indice de refracție <code>n<sub>2</sub></code>.</p>
+
+        <h2>Legea lui Snell</h2>
+        <p>Legea lui Snell este dată de următoarea ecuație:</p>
+        <pre><code>n<sub>1</sub> sin θ<sub>1</sub> = n<sub>2</sub> sin θ<sub>2</sub></code></pre>
+        <p>unde:</p>
+        <ul>
+            <li><code>n<sub>1</sub></code> este indicele de refracție al primului mediu,</li>
+            <li><code>θ<sub>1</sub></code> este unghiul de incidență (unghiul dintre raza incidentă și perpendiculara pe suprafața de separare dintre cele două medii),</li>
+            <li><code>n<sub>2</sub></code> este indicele de refracție al celui de-al doilea mediu,</li>
+            <li><code>θ<sub>2</sub></code> este unghiul de refracție (unghiul dintre raza refractată și perpendiculara pe suprafața de separare dintre cele două medii).</li>
+        </ul>
+
+        <h2>Calcularea componentelor</h2>
+
+        <h3>Calcularea unghiului de refracție <code>θ<sub>2</sub></code></h3>
+        <p>Pentru a găsi unghiul de refracție <code>θ<sub>2</sub></code>, cunoscând unghiul de incidență <code>θ<sub>1</sub></code>, indicele de refracție al primului mediu <code>n<sub>1</sub></code> și indicele de refracție al celui de-al doilea mediu <code>n<sub>2</sub></code>:</p>
+        <pre><code>sin θ<sub>2</sub> = (n<sub>1</sub> sin θ<sub>1</sub>) / n<sub>2</sub>
+θ<sub>2</sub> = arcsin((n<sub>1</sub> sin θ<sub>1</sub>) / n<sub>2</sub>)</code></pre>
+
+        <h3>Calcularea unghiului de incidență <code>θ<sub>1</sub></code></h3>
+        <p>Pentru a găsi unghiul de incidență <code>θ<sub>1</sub></code>, cunoscând unghiul de refracție <code>θ<sub>2</sub></code>, indicele de refracție al primului mediu <code>n<sub>1</sub></code> și indicele de refracție al celui de-al doilea mediu <code>n<sub>2</sub></code>:</p>
+        <pre><code>sin θ<sub>1</sub> = (n<sub>2</sub> sin θ<sub>2</sub>) / n<sub>1</sub>
+θ<sub>1</sub> = arcsin((n<sub>2</sub> sin θ<sub>2</sub>) / n<sub>1</sub>)</code></pre>
+
+        <h3>Calcularea indicelui de refracție <code>n<sub>2</sub></code></h3>
+        <p>Pentru a găsi indicele de refracție al celui de-al doilea mediu <code>n<sub>2</sub></code>, cunoscând unghiul de incidență <code>θ<sub>1</sub></code>, unghiul de refracție <code>θ<sub>2</sub></code> și indicele de refracție al primului mediu <code>n<sub>1</sub></code>:</p>
+        <pre><code>n<sub>2</sub> = (n<sub>1</sub> sin θ<sub>1</sub>) / sin θ<sub>2</sub></code></pre>
+
+        <h3>Calcularea indicelui de refracție <code>n<sub>1</sub></code></h3>
+        <p>Pentru a găsi indicele de refracție al primului mediu <code>n<sub>1</sub></code>, cunoscând unghiul de incidență <code>θ<sub>1</sub></code>, unghiul de refracție <code>θ<sub>2</sub></code> și indicele de refracție al celui de-al doilea mediu <code>n<sub>2</sub></code>:</p>
+        <pre><code>n<sub>1</sub> = (n<sub>2</sub> sin θ<sub>2</sub>) / sin θ<sub>1</sub></code></pre>
+
+        <h2>Excepții și considerații speciale</h2>
+
+        <h3>Reflexia totală</h3>
+        <p>Apare atunci când lumina trece dintr-un mediu cu un indice de refracție mai mare într-un mediu cu un indice de refracție mai mic și unghiul de incidență depășește un anumit unghi critic. Unghiul critic <code>θ<sub>c</sub></code> este dat de:</p>
+        <pre><code>θ<sub>c</sub> = arcsin(n<sub>2</sub> / n<sub>1</sub>)</code></pre>
+
+        <h3>Lumină monocromatică vs. polichromatică</h3>
+        <p>Legea lui Snell se aplică individual fiecărei componente de culoare a luminii polichromatice, deoarece indicele de refracție depinde de lungimea de undă a luminii.</p>
+        
+        <p>Legea lui Snell este esențială pentru înțelegerea fenomenelor de refracție și este aplicată în numeroase domenii precum optica, fizica și ingineria.</p>
+    </div>
+</body>
+</html>

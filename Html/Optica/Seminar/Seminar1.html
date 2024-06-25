@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicație Legea lui Snell</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        input, select {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Aplicație Legea lui Snell</h1>
+        <h2>Introdu valorile:</h2>
+        <form id="snellForm">
+            <label for="component">Componenta de calculat:</label>
+            <select id="component" onchange="updateFields()" required>
+                <option value="theta2">Unghiul de refracție (θ<sub>2</sub>)</option>
+                <option value="theta1">Unghiul de incidență (θ<sub>1</sub>)</option>
+                <option value="n1">Indicele de refracție al primului mediu (n<sub>1</sub>)</option>
+                <option value="n2">Indicele de refracție al celui de-al doilea mediu (n<sub>2</sub>)</option>
+            </select>
+
+            <div id="fields">
+                <label for="n1">Indicele de refracție al primului mediu (n<sub>1</sub>):</label>
+                <input type="number" id="n1" step="any" required>
+
+                <label for="theta1">Unghiul de incidență (θ<sub>1</sub>) în grade:</label>
+                <input type="number" id="theta1" step="any" required>
+
+                <label for="n2">Indicele de refracție al celui de-al doilea mediu (n<sub>2</sub>):</label>
+                <input type="number" id="n2" step="any" required>
+            </div>
+
+            <button type="button" onclick="calculate()">Calculează</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function updateFields() {
+            const component = document.getElementById('component').value;
+            const fields = document.getElementById('fields');
+            fields.innerHTML = '';
+
+            if (component === 'theta2') {
+                fields.innerHTML = `
+                    <label for="n1">Indicele de refracție al primului mediu (n<sub>1</sub>):</label>
+                    <input type="number" id="n1" step="any" required>
+                    
+                    <label for="theta1">Unghiul de incidență (θ<sub>1</sub>) în grade:</label>
+                    <input type="number" id="theta1" step="any" required>
+                    
+                    <label for="n2">Indicele de refracție al celui de-al doilea mediu (n<sub>2</sub>):</label>
+                    <input type="number" id="n2" step="any" required>
+                `;
+            } else if (component === 'theta1') {
+                fields.innerHTML = `
+                    <label for="n1">Indicele de refracție al primului mediu (n<sub>1</sub>):</label>
+                    <input type="number" id="n1" step="any" required>
+                    
+                    <label for="theta2">Unghiul de refracție (θ<sub>2</sub>) în grade:</label>
+                    <input type="number" id="theta2" step="any" required>
+                    
+                    <label for="n2">Indicele de refracție al celui de-al doilea mediu (n<sub>2</sub>):</label>
+                    <input type="number" id="n2" step="any" required>
+                `;
+            } else if (component === 'n1') {
+                fields.innerHTML = `
+                    <label for="theta1">Unghiul de incidență (θ<sub>1</sub>) în grade:</label>
+                    <input type="number" id="theta1" step="any" required>
+                    
+                    <label for="theta2">Unghiul de refracție (θ<sub>2</sub>) în grade:</label>
+                    <input type="number" id="theta2" step="any" required>
+                    
+                    <label for="n2">Indicele de refracție al celui de-al doilea mediu (n<sub>2</sub>):</label>
+                    <input type="number" id="n2" step="any" required>
+                `;
+            } else if (component === 'n2') {
+                fields.innerHTML = `
+                    <label for="n1">Indicele de refracție al primului mediu (n<sub>1</sub>):</label>
+                    <input type="number" id="n1" step="any" required>
+                    
+                    <label for="theta1">Unghiul de incidență (θ<sub>1</sub>) în grade:</label>
+                    <input type="number" id="theta1" step="any" required>
+                    
+                    <label for="theta2">Unghiul de refracție (θ<sub>2</sub>) în grade:</label>
+                    <input type="number" id="theta2" step="any" required>
+                `;
+            }
+        }
+
+        function calculate() {
+            const component = document.getElementById('component').value;
+            let result = '';
+
+            if (component === 'theta2') {
+                const n1 = parseFloat(document.getElementById('n1').value);
+                const theta1 = parseFloat(document.getElementById('theta1').value) * (Math.PI / 180); // Convert to radians
+                const n2 = parseFloat(document.getElementById('n2').value);
+                const sinTheta2 = (n1 * Math.sin(theta1)) / n2;
+                if (sinTheta2 > 1 || sinTheta2 < -1) {
+                    result = 'Calcul imposibil. Verifică valorile introduse.';
+                } else {
+                    const theta2 = Math.asin(sinTheta2) * (180 / Math.PI); // Convert to degrees
+                    result = `Unghiul de refracție (θ<sub>2</sub>): ${theta2.toFixed(2)}°`;
+                }
+            } else if (component === 'theta1') {
+                const n1 = parseFloat(document.getElementById('n1').value);
+                const theta2 = parseFloat(document.getElementById('theta2').value) * (Math.PI / 180); // Convert to radians
+                const n2 = parseFloat(document.getElementById('n2').value);
+                const sinTheta1 = (n2 * Math.sin(theta2)) / n1;
+                if (sinTheta1 > 1 || sinTheta1 < -1) {
+                    result = 'Calcul imposibil. Verifică valorile introduse.';
+                } else {
+                    const theta1Calc = Math.asin(sinTheta1) * (180 / Math.PI); // Convert to degrees
+                    result = `Unghiul de incidență (θ<sub>1</sub>): ${theta1Calc.toFixed(2)}°`;
+                }
+            } else if (component === 'n1') {
+                const n2 = parseFloat(document.getElementById('n2').value);
+                const theta1 = parseFloat(document.getElementById('theta1').value) * (Math.PI / 180); // Convert to radians
+                const theta2 = parseFloat(document.getElementById('theta2').value) * (Math.PI / 180); // Convert to radians
+                const n1Calc = (n2 * Math.sin(theta2)) / Math.sin(theta1);
+                result = `Indicele de refracție al primului mediu (n<sub>1</sub>): ${n1Calc.toFixed(2)}`;
+            } else if (component === 'n2') {
+                const n1 = parseFloat(document.getElementById('n1').value);
+                const theta1 = parseFloat(document.getElementById('theta1').value) * (Math.PI / 180); // Convert to radians
+                const theta2 = parseFloat(document.getElementById('theta2').value) * (Math.PI / 180); // Convert to radians
+                const n2Calc = (n1 * Math.sin(theta1)) / Math.sin(theta2);
+                result = `Indicele de refracție al celui de-al doilea mediu (n<sub>2</sub>): ${n2Calc.toFixed(2)}`;
+            }
+
+            document.getElementById('result').innerHTML = result;
+        }
+
+        document.addEventListener('DOMContentLoaded', updateFields);
+    </script>
+</body>
+</html>
